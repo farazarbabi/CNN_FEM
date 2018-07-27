@@ -1,4 +1,4 @@
-# CNN_FEM
+# Using Convolutional Neural Networks to Improve Finite Element Analysis
 Modeling of physical systems includes extensive use of software packages that
 implement the accurate finite element method for solving differential equations considered
 along with the appropriate initial and boundary conditions. When the problem size becomes
