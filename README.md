@@ -1,10 +1,2 @@
 # Using Convolutional Neural Networks to Accelerate Finite Element Analysis
-Modeling of physical systems includes extensive use of software packages that
-implement the accurate finite element method for solving differential equations considered
-along with the appropriate initial and boundary conditions. When the problem size becomes
-large, time needed to solve the resulting linear systems may range from hours to weeks, and
-if the input parameters need to be adjusted, even slightly, the simulations has to be re-done
-from scratch. Recent advances in machine learning algorithms and their successful
-applications in various fields demonstrate that, if properly chosen and trained, these models
-can significantly improve conventional techniques. In this note we discuss possibilities to
-complement the finite element studies with machine learning and provide a case study.
+Finite element method is the most popular technique for stress analysis of solid materials in the literature. Calculating stress distribution in physical systems requires extensive computational resources through implementing software packages, and can take hours, days or weeks to execute for complex geometries. More importantly, if a simple change has to be applied in the boundary conditions of material properties, the simulation need to be redone from scratch to apply new conditions. These drawbacks of conventional stress analysis methods limit opportunities for interactive design. Recent advances in deep learning algorithms demonstrate that by approperiate selection of models and with the cost of minor additional computational errors we can significantly speed up the material stress analysis methods by two order of magnitudes. In this note, I discuss the feasibility of complementing finite element studies with deep learning through providing a case study.
