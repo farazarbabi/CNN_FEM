@@ -7,11 +7,12 @@ Here, I use finite volume method (FVM) to calculate the stress distribution on a
 
 ## Methodology
 ### Geometry
-The 2D flat plate with hole that I use in this study as test case is illustrated in Figure 1. \
+The 2D flat plate with hole that I use in this study as test case is illustrated in Figure 1. The simulations were done on a quarter of the plate, as the problem is symmetric. The forces were applied on the right and left edges. The grid was generated non-uniformly with finer numerical cells closer to the boundaries, forming a total of 1071 numerical cells. \
 \
 <img src="platehole-geom.jpg"  width="600" align="center"> \
 _Fig.1. Schematic illustration of the geometry._\
 \
+dfgfg
 
 
 
