@@ -15,15 +15,15 @@ _Fig.1. Schematic illustration of the geometry._\
 ### Numerical Simulation
 The numerical simulations were conducted using OpenFOAM 2.3 software package. The FVM method was employed for calculating partial differential equations. The stress distribution as a result of applied stress of 1000Pa is shown in Figure 2.\
 \ 
-<img src="contour_1000.tif"  width="400" align="center"> \
+<img src="contour_1000.png"  width="600" align="center"> \
 _Fig.2. A sample of the simulation results (S=1000Pa)._\
 \
 
 ### Building the Model
 To create the database of training and score data, a series of simulations were conducted on a range of applied stresses (i.e. 0, 1000, 2000, … 100,000(Pa)) resulting in 101 dataset (each 1071 rows). The train dataset includes the coordinates of each grid point, the applied stress, and the stress values calculated using FVM (see Figure 3). \
 \ 
-<img src="datasets.png"  width="400" align="center"> \
-_Fig.2. A sample of the simulation results (S=1000Pa)._\
+<img src="datasets.png"  width="500" align="center"> \
+_Fig.3. Illustration of implementation of training, test and score datasets._\
 \
 
 
