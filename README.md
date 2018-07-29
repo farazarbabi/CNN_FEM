@@ -1,8 +1,8 @@
 # Using Convolutional Neural Networks to Accelerate Stress Analysis
 
-Faraz Arbabi, Ph.D.
+####Faraz Arbabi, Ph.D.
 Data Scientist at Gnowise Inc., Toronto, Ontario, Canada
-<a href=\"mailto:faraz@gnowise.com\">faraz@gnowise.com</a>
+faraz@gnowise.com
 
 Finite element, finite difference, and finite volume methods are among the most popular methods for solving partial differential equations governing many problems in engineering and material sciences. Calculating stress distribution in physical systems requires extensive computational resources through implementing software packages, and can take hours, days or weeks to execute for complex geometries. More importantly, the simulation need to be redone from scratch to apply new boundary conditions or material properties during the design process. These drawbacks of conventional stress analysis methods limit opportunities for interactive design. Recent advances in deep learning algorithms demonstrate that by approperiate selection of models and with the cost of minor additional computational errors we can significantly accelerate the stress analysis methods. In this note, I discuss the feasibility of complementing finite volume method with deep learning through providing a case study. The outcomes show that using Convolutional Neural Network method, we can reduce the computational time by 82%, while obtaining the results with 94% accuracy.
 
