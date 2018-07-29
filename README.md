@@ -1,4 +1,9 @@
 # Using Convolutional Neural Networks to Accelerate Stress Analysis
+
+Faraz Arbabi, Ph.D.
+Data Scientist at Gnowise Inc., Toronto, Ontario, Canada
+<a href=\"mailto:faraz@gnowise.com\">faraz@gnowise.com</a>
+
 Finite element, finite difference, and finite volume methods are among the most popular methods for solving partial differential equations governing many problems in engineering and material sciences. Calculating stress distribution in physical systems requires extensive computational resources through implementing software packages, and can take hours, days or weeks to execute for complex geometries. More importantly, the simulation need to be redone from scratch to apply new boundary conditions or material properties during the design process. These drawbacks of conventional stress analysis methods limit opportunities for interactive design. Recent advances in deep learning algorithms demonstrate that by approperiate selection of models and with the cost of minor additional computational errors we can significantly accelerate the stress analysis methods. In this note, I discuss the feasibility of complementing finite volume method with deep learning through providing a case study. The outcomes show that using Convolutional Neural Network method, we can reduce the computational time by 82%, while obtaining the results with 94% accuracy.
 
 ## Introduction
@@ -10,21 +15,24 @@ Here, I use finite volume method (FVM) to calculate the stress distribution on a
 The 2D flat plate with hole that I use in this study as test case is illustrated in Figure 1. The simulations were done on a quarter of the plate, as the problem is symmetric. The forces were applied on the right and left edges. The grid was generated non-uniformly with finer numerical cells closer to the boundaries, forming a total of 1071 numerical cells. 
 
 <img src="platehole-geom.jpg"  width="600" align="center"> \
-_Fig.1. Schematic illustration of the geometry._\
+_Fig.1. Schematic illustration of the geometry._
 
 ### Numerical Simulation
 The numerical simulations were conducted using OpenFOAM 2.3 software package. The FVM method was employed for calculating partial differential equations. The stress distribution as a result of applied stress of 1000Pa is shown in Figure 2.
 
 <img src="contour_1000.png"  width="350" align="center"> \
-_Fig.2. A sample of the simulation results (S=1000Pa)._\
+_Fig.2. A sample of the simulation results (S=1000Pa)._
 
 ### Building the Model
-To create the database of training and score data, a series of simulations were conducted on a range of applied stresses (i.e. 0, 1000, 2000, … 100,000(Pa)) resulting in 101 dataset (each 1071 rows). The train dataset includes the coordinates of each grid point, the applied stress, and the stress values calculated using FVM (see Figure 3). 
+To create the database of training and score data, a series of simulations were conducted on a range of applied stresses (i.e. 0, 1000, 2000, … 100,000(Pa)) resulting in 101 dataset (each 1071 rows). The train dataset includes the coordinates of each grid point, the applied stress, and the stress values calculated using FVM (see Figure 3).
 
 <img src="datasets.png"  width="500" align="center"> \
-_Fig.3. Illustration of implementation of training, test and score datasets._\
+_Fig.3. Illustration of implementation of training, test and score datasets._
 
-bl
+A four layer CNN model was created using Keras library in Python 3.6, and Sigmond function was used as the activation function. 
+
+## Results
+After compilation, the model was trained for 500 epochs. I was able to obtain an accuracy of 94% (see Figure 4). 
 
 
 
