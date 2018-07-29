@@ -10,9 +10,17 @@ Here, I use finite volume method (FVM) to calculate the stress distribution on a
 The 2D flat plate with hole that I use in this study as test case is illustrated in Figure 1. The simulations were done on a quarter of the plate, as the problem is symmetric. The forces were applied on the right and left edges. The grid was generated non-uniformly with finer numerical cells closer to the boundaries, forming a total of 1071 numerical cells. \
 \
 <img src="platehole-geom.jpg"  width="600" align="center"> \
-_Fig.1. Schematic illustration of the geometry._\
+_          Fig.1. Schematic illustration of the geometry._\
+
+### Numerical Simulation
+The numerical simulations were conducted using OpenFOAM 2.3 software package. The FVM method was employed for calculating partial differential equations. Simulations were conducted on a range of applied stresses (i.e. 0, 1000, 2000, … 100,000(Pa)) resulting in 101 dataset (each 1071 rows). The stress distribution as a result of applied stress of 1000Pa is shown in Figure 2.\
 \
-dfgfg
+<img src="contour_1000.tif"  width="400" align="center"> \
+_          Fig.2. A sample of the simulation results (S=1000Pa)._\
+\
+ads
+
+
 
 
 
