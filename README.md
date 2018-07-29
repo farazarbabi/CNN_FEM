@@ -7,24 +7,23 @@ Here, I use finite volume method (FVM) to calculate the stress distribution on a
 
 ## Methodology
 ### Geometry
-The 2D flat plate with hole that I use in this study as test case is illustrated in Figure 1. The simulations were done on a quarter of the plate, as the problem is symmetric. The forces were applied on the right and left edges. The grid was generated non-uniformly with finer numerical cells closer to the boundaries, forming a total of 1071 numerical cells. \
+The 2D flat plate with hole that I use in this study as test case is illustrated in Figure 1. The simulations were done on a quarter of the plate, as the problem is symmetric. The forces were applied on the right and left edges. The grid was generated non-uniformly with finer numerical cells closer to the boundaries, forming a total of 1071 numerical cells. 
 
 <img src="platehole-geom.jpg"  width="600" align="center"> \
 _Fig.1. Schematic illustration of the geometry._\
 
 ### Numerical Simulation
-The numerical simulations were conducted using OpenFOAM 2.3 software package. The FVM method was employed for calculating partial differential equations. The stress distribution as a result of applied stress of 1000Pa is shown in Figure 2.\
+The numerical simulations were conducted using OpenFOAM 2.3 software package. The FVM method was employed for calculating partial differential equations. The stress distribution as a result of applied stress of 1000Pa is shown in Figure 2.
 
-<img src="contour_1000.png"  width="600" align="center"> \
+<img src="contour_1000.png"  width="350" align="center"> \
 _Fig.2. A sample of the simulation results (S=1000Pa)._\
-\
 
 ### Building the Model
-To create the database of training and score data, a series of simulations were conducted on a range of applied stresses (i.e. 0, 1000, 2000, … 100,000(Pa)) resulting in 101 dataset (each 1071 rows). The train dataset includes the coordinates of each grid point, the applied stress, and the stress values calculated using FVM (see Figure 3). \
+To create the database of training and score data, a series of simulations were conducted on a range of applied stresses (i.e. 0, 1000, 2000, … 100,000(Pa)) resulting in 101 dataset (each 1071 rows). The train dataset includes the coordinates of each grid point, the applied stress, and the stress values calculated using FVM (see Figure 3). 
 
 <img src="datasets.png"  width="500" align="center"> \
 _Fig.3. Illustration of implementation of training, test and score datasets._\
-\
+
 bl
 
 
