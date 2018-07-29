@@ -34,7 +34,7 @@ A four layer CNN model was created using Keras library in Python 3.6, and Sigmon
 ## Results
 After compilation, the model was trained using 90% of the data as the train data for 500 epochs. I was able to obtain an accuracy of 94% (see Figure 4). 
 
-<img src="fitting.jpg"  width="300" align="center"> \
+<img src="fitting.jpg"  width="250" align="center"> \
 _Fig.4. Training the model_
 
 In order to evaluate the speed of the model, I regenerated the sample result for S=1000Pa (see Figure 5). 
@@ -48,3 +48,4 @@ The CNN model returned the results in around 0.012 seconds, which is 82% faster 
 _Fig.6. CNN model execution time._
 
 ## Conclusion
+This study provided a new case study
