@@ -4,7 +4,7 @@
 Data Scientist at Gnowise Inc., Toronto, Ontario, Canada**\
 faraz@gnowise.com
 
-Finite element, finite difference, and finite volume methods are among the most popular methods for solving partial differential equations governing many problems in engineering and material sciences. Calculating stress distribution in physical systems requires extensive computational resources through implementing software packages, and can take hours, days or weeks to execute for complex geometries. More importantly, the simulation need to be redone from scratch to apply new boundary conditions or material properties during the design process. These drawbacks of conventional stress analysis methods limit opportunities for interactive design. Recent advances in deep learning algorithms demonstrate that by approperiate selection of models and at a cost of minor additional computational errors we can significantly accelerate the stress analysis methods. In this note, I discuss the feasibility of complementing finite volume method with deep learning through providing a case study. The outcomes show that using Convolutional Neural Network method, we can reduce the computational time by 82%, while obtaining the results with 94% accuracy.
+Finite element, finite difference, and finite volume methods are among the most popular methods for solving partial differential equations governing many problems in engineering and material sciences. Calculating stress distribution in physical systems requires extensive computational resources through implementing software packages, and can take hours, days or weeks to execute for complex geometries. More importantly, the simulation need to be redone from scratch to apply new boundary conditions or material properties during the design process. These drawbacks of conventional stress analysis methods limit opportunities for interactive design. Recent advances in deep learning algorithms demonstrate that by approperiate selection of models and at a cost of minor additional computational errors we can significantly accelerate the stress analysis methods. In this note, I discuss the feasibility of complementing finite volume method with deep learning through providing a case study. The outcomes show that using Convolutional Neural Network method, we can reduce the computational time by 82%, while obtaining the results with 94.2% accuracy.
 
 ## Introduction
 Recent studies have shown the possibility of incorporating machine learning (ML) and deep learning methods to obtain faster and less costly solutions for stress analysis problems. Nguyen-Thien and Tran-Cong [1] showed the capability of Artificial Neural Network (ANN) methods in implementing numerical approximation of functions of several variables and their first and second order partial derivatives. Martin-Guerrerohas et al. [2] demonstrated the feasibility of using ANN to model the deformations produced in human soft tissue with high accuracy. They used finite element method (FEM) to produce the datasets of deformation to feed the ML algorithm. Kononenko and Kononenko [3] as well as Javadi et al. [4] integrated neural networks with finite element method to analyse stress distribution simple one dimensional (1D) problems. These studies either used a small dataset for training their model, or provided simple 1D problems as test cases. In this study I show the feasibility of using neural networks for faciliating stress analysis problems on more complex, two dimensional (2D) problems.
@@ -32,9 +32,9 @@ _Fig.3. Training, test and score datasets._
 A four layer CNN model was created using Keras library in Python 3.6, and Sigmond function was used as the activation function. 
 
 ## Results
-After compilation, the model was trained using 90% of the data as the train data for 500 epochs. I was able to obtain an accuracy of 94% (see Figure 4). 
+After compilation, the model was trained using 90% of the data as the train data for 500 epochs. I was able to obtain an accuracy of 94.2% (see Figure 4). 
 
-<img src="fitting.jpg"  width="250" align="center"> \
+<img src="fitting.jpg"  width="270" align="center"> \
 _Fig.4. Training the model._
 
 In order to evaluate the speed of the model, I regenerated the sample result for S=1000Pa (see Figure 5). 
@@ -44,11 +44,11 @@ _Fig.5. CNN model output for S=1000Pa._
 
 The CNN model returned the results in around 0.012 seconds, which is 82% faster compared to the FVM method on the same computer (see Figure 6).
 
-<img src="modeltime.jpg"  width="400" align="center"> \
+<img src="modeltime.jpg"  width="440" align="center"> \
 _Fig.6. CNN model execution time._
 
 ## Conclusion
-This work showed the feasibility of CNN method for solving 2D stress analysis problems significantly faster than the conventional FEM, FDM, and FVM methods at a cost of low additional errors. It should be noted that this project is still under development, and I believe it is possible to reduce the error by adding more hidden layers, optimizing the hyperparameters, and increasing the size of training dataset.
+This work showed the feasibility of CNN method for solving 2D stress analysis problems significantly faster than the conventional FEM, FDM, and FVM methods at a cost of low additional errors. It should be noted that this project is still under development, and I believe it is possible to reduce the CNN error by adding more hidden layers, optimizing the hyperparameters, and increasing the size of training dataset.
 
 ## References
 [1] Nguyen-Thien, T. & Tran-Cong, T. Approximation of functions and their derivatives: A neural network implementation with applications. Applied Mathematical Modelling 23, 687-704, doi:https://doi.org/10.1016/S0307-904X(99)00006-2 (1999). \
