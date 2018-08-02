@@ -1,4 +1,4 @@
-# Using Convolutional Neural Networks to Accelerate Stress Analysis
+# Stress Analysis in Solid Materials Using Convolutional Neural Networks
 
 **Faraz Arbabi, Ph.D.\
 Data Scientist at Gnowise Inc., Toronto, Ontario, Canada**\
